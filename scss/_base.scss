@@ -1,0 +1,57 @@
+/* -------------------------------------- */
+/* Variables */
+/* -------------------------------------- */
+// #0f0c29, #302b63, #24243e
+$color-primary: #4e54c8;
+
+$color-purple-dark: #0f0c29;
+$color-purple-medium: #302b63;
+$color-purple-light: #8f94fb;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+$color-grey-light-4: #ccc;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%; // 1 rem = 10px
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+img{
+  width: 100%;
+}
+
+// Utility classes
+
+.bottom-line{
+  width: 10rem;
+  height: 3px;
+  background-color: #8f94fb;
+}
