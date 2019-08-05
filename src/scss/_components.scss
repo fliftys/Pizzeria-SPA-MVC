@@ -322,13 +322,16 @@
   }
   &__list{
     padding: 1rem;
+    overflow-y: scroll;
+    max-height: 50vh;
+    transition: all .5s;
   }
   &__list-item{
     padding: 1rem 2rem;
     border-bottom: 1px solid $color-grey-dark-1;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
+    transition: all .2s;
   }
 
   &__pizza-info{
@@ -379,6 +382,8 @@
     padding: 1rem 2rem;
     font-size: 1.5rem;
     transition: all .3s;
+    cursor: pointer;
+    display: inline-block;
 
     &--add{
       font-family: inherit;
@@ -426,6 +431,21 @@
     margin-top: 2rem;
     align-self: center;
   }
+
+  &__discount{
+    transition: all .3s;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--success{
+      color: rgba(9, 209, 85, 0.89);
+    }
+    &--error{
+      color: rgba(202, 24, 17, 0.89);
+    }
+  }
+
 }
 
 /* -------------------------------------- */
@@ -437,6 +457,7 @@
     
   }
   &__list-item{
+    animation: showItem 2s;
     margin: 2rem 0;
     border: 1px solid $color-grey-dark-1;
     padding: 1rem 2rem;
@@ -540,5 +561,28 @@
 
   &__button{
     cursor: pointer;
+  }
+}
+
+@keyframes showItem{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* -------------------------------------- */
+/* LOADER */
+/* -------------------------------------- */
+.loader{
+  height: 7rem;
+  width: 7rem;
+  margin: 10rem auto;
+
+  text
+  &__gif{
+    width: 100%;
   }
 }

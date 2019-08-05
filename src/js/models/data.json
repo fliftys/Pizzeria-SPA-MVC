@@ -1,0 +1,40 @@
+[
+  {
+    "id": "p1",
+    "img1": "./img/pizza/1.png",
+    "title": "Pizza#1",
+    "prices": [
+      20, 30, 40
+    ],
+    "sizes": [
+      40, 50, 60
+    ],
+    "img2": "./img/ingredients/pizza.png",
+    "ingredientsPath": "./img/ingredients/sprite.svg#",
+    "ingredientsList": [
+      "ketchup",
+      "cheese",
+      "mushroom",
+      "roast-chicken"
+    ]
+  },
+  {
+    "id": "p2",
+    "img1": "./img/pizza/2.png",
+    "title": "Pizza#2",
+    "prices": [
+      25, 35, 45
+    ],
+    "sizes": [
+      40, 50, 60
+    ],
+    "img2": "./img/ingredients/pizza.png",
+    "ingredientsPath": "./img/ingredients/sprite.svg#",
+    "ingredientsList": [
+      "ketchup",
+      "bacon",
+      "mushroom",
+      "roast-chicken"
+    ]
+  }
+]

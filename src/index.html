@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pizzeria</title>
+  
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+
+  <!-- STYLES -->
+  <!-- <link rel="stylesheet" href="./css/main.css"> -->
+
+</head>
+<body>
+
+  <div class="container">
+    <!-- HEADER -->
+      <header class="header">
+          <div class="header__logo">
+            <img src="./img/logo.png" alt="logo" class="header__img">
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+      
+              <li class="header__list-item">
+                <a href="#home" class="header__link">Strona główna</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#menu" class="header__link">Menu</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#" class="header__link">O nas</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#" class="header__link">Kontakt</a>
+              </li>
+
+              <li class="header__list-item">
+                  <a href="#shopping-cart" id="#shopping-cart" class="shop">
+                      <svg class="shop__svg">
+                          <use xlink:href="img/shop.svg#shopping-cart" />
+                      </svg>
+                      <span class="shop__count shop__count--visible">2</span>
+                  </a>
+
+              </li>
+
+            </ul>
+          </nav>
+        </header>
+
+
+      <div class="content-page" id="home" >
+          <div class="heading">
+              <h1 class="heading__text">
+                Jedyna taka w mieście
+              </h1>
+              <div class="bottom-line"></div>
+              <a href="#" class="btn btn--primary">Zobacz menu!</a>
+            </div>
+    
+    
+            <!-- SLIDER -->
+            <section class="slider">
+              <img src="./img/slider/1.jpg" alt="picca" class="slider__img">
+            </section>
+    
+            <!-- GALLERY -->
+            <section class="gallery">
+              
+              <div class="gallery__box">
+                <img src="./img/gallery/1.jpg" alt="" class="gallery__img">
+              </div>          
+              <div class="gallery__box">
+                <img src="./img/gallery/2.jpg" alt="" class="gallery__img">
+              </div>          
+              <div class="gallery__box">
+                <img src="./img/gallery/3.jpg" alt="" class="gallery__img">
+              </div>
+    
+              <div class="gallery__btn">
+                  <a href="#" class="btn btn--primary">Zobacz więcej</a>
+              </div>
+             
+            </section>
+            
+            <!-- LOCATION -->
+            <section class="location">
+              bedziemy widziec
+            </section>
+      </div>
+
+      <!-- SHOPPING CART -->
+      <div class="content-page shopping-cart" id="shopping-cart">
+        
+        <div class="shopping-cart__wrapper">
+          <a class="shopping-cart__close" href="#home">&times;</a>
+          <h2 class="shopping-cart__title">Koszyk</h2>
+          <ul class="shopping-cart__list">
+
+
+          </ul>
+          
+          <form class="shopping-cart__coupons">
+              <label for="" class="shopping-cart__label">
+                Kupon promocyjny
+              </label>
+              <input class="shopping-cart__key" type="text" id="key" placeholder="Kod kuponu =mobbyn">
+              <a class="shopping-cart__btn shopping-cart__btn--add">
+                Dodaj
+              </a>
+          </form>
+          <div class="shopping-cart__discount">
+          </div>
+          <div class="shopping-cart__info">
+            <p>Wartość zamówienia</p>
+            <p class="shopping-cart__order-value"></p>
+          </div>
+
+          <a href="#order" class="shopping-cart__xD btn btn--primary">Zamawiam</a>
+
+        </div>
+
+      </div>
+      
+      <!-- MENU -->
+       
+      <div class="content-page menu" id="menu">
+
+        <ul class="menu__list">
+
+          <!-- end menu -->
+        </ul>
+
+
+      </div>
+
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div class="footer__logo">
+            <img src="./img/logo.png" alt="" class="footer__img">
+          </div>
+
+          <ul class="socials">
+            
+            <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                      <use xlink:href="./img/socials.svg#facebook-logo-button" />
+                  </svg>
+                </a>
+            </li>             
+            <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                      <use xlink:href="./img/socials.svg#github-logo" />
+                  </svg>
+                </a>
+            </li>             
+            <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                      <use xlink:href="./img/socials.svg#instagram" />
+                  </svg>
+                </a>
+            </li>             
+            <li class="socials__item">
+                <a href="#" class="socials__link">
+                  <svg class="socials__icon">
+                      <use xlink:href="./img/socials.svg#youtube" />
+                  </svg>
+                </a>
+            </li>  
+          </ul>
+
+          <p class="footer__copyright">
+            Wszelkie prawa zastrzeżone &copy; 2019, Mobbyn
+          </p>
+        </footer>
+
+  </div>
+
+  
+
+
+
+
+</body>
+</html>
