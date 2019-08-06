@@ -2,15 +2,19 @@
 <h1>Pizzeria SPA-MVC</h1>
 
 <h2>Użyte technologie:</h2>
-- HTML5
-- CSS3 (SASS - SCSS) - według założeń wzorca BEM
-- Vanillia JavaSacript - MVC
+<ul>
+  <li>HTML5</li>
+  <li>CSS3 (SASS - SCSS) - według założeń wzorca BEM</li>
+  <li>Vanillia JavaSacript - według założeń wzorca MVC</li>
+</ul>
 
 <h2>Użyte narzędzia: </h2>
-- Visual Studio Code
-- WEBPACK
-- BABEL 
-- NODE-SASS
+<ul>
+  <li>Visual Studio Code</li>
+  <li>WEBPACK</li>
+  <li>BABEL</li>
+  <li>NODE-SASS</li>
+</ul>
 
 <h3>Opis</h3>
 Jest to aplikacja SPA umożliwiająca dokonywanie zamówień pizzy online.
