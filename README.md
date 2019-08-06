@@ -1,5 +1,8 @@
 # Pizzeria-SPA-MVC
-<h1>Pizzeria SPA-MVC</h1>
+
+![opis](https://user-images.githubusercontent.com/30511389/62514058-448afd80-b81e-11e9-901e-b0cf4384d52f.png)
+
+Podgląd netlify: https://hopeful-hopper-6769a4.netlify.com/
 
 <h2>Użyte technologie:</h2>
 <ul>
