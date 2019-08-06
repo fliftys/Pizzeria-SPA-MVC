@@ -2,7 +2,7 @@
   {
     "id": "p1",
     "img1": "./img/pizza/1.png",
-    "title": "Pizza#1",
+    "title": "1.Tokio",
     "prices": [
       20, 30, 40
     ],
@@ -21,7 +21,7 @@
   {
     "id": "p2",
     "img1": "./img/pizza/2.png",
-    "title": "Pizza#2",
+    "title": "2.Berlin",
     "prices": [
       25, 35, 45
     ],
@@ -34,7 +34,88 @@
       "ketchup",
       "bacon",
       "mushroom",
+      "cheese"
+    ]
+  },
+
+  {
+    "id": "p3",
+    "img1": "./img/pizza/3.png",
+    "title": "3.Moskwa",
+    "prices": [
+      25, 35, 45
+    ],
+    "sizes": [
+      40, 50, 60
+    ],
+    "img2": "./img/ingredients/pizza.png",
+    "ingredientsPath": "./img/ingredients/sprite.svg#",
+    "ingredientsList": [
+      "ketchup",
+      "cheese",
+      "pineapple",
       "roast-chicken"
+    ]
+  },
+
+  {
+    "id": "p4",
+    "img1": "./img/pizza/4.png",
+    "title": "4.Denver",
+    "prices": [
+      25, 35, 45
+    ],
+    "sizes": [
+      40, 50, 60
+    ],
+    "img2": "./img/ingredients/pizza.png",
+    "ingredientsPath": "./img/ingredients/sprite.svg#",
+    "ingredientsList": [
+      "ketchup",
+      "cheese",
+      "roast-chicken",
+      "bacon"
+    ]
+  },
+
+  {
+    "id": "p5",
+    "img1": "./img/pizza/5.png",
+    "title": "5.Helsinki",
+    "prices": [
+      25, 35, 45
+    ],
+    "sizes": [
+      40, 50, 60
+    ],
+    "img2": "./img/ingredients/pizza.png",
+    "ingredientsPath": "./img/ingredients/sprite.svg#",
+    "ingredientsList": [
+      "ketchup",
+      "cheese",
+      "mushroom",
+      "pineapple"
+    ]
+  },
+
+  {
+    "id": "p6",
+    "img1": "./img/pizza/3.png",
+    "title": "6.Oslo",
+    "prices": [
+      25, 35, 45
+    ],
+    "sizes": [
+      40, 50, 60
+    ],
+    "img2": "./img/ingredients/pizza.png",
+    "ingredientsPath": "./img/ingredients/sprite.svg#",
+    "ingredientsList": [
+      "ketchup",
+      "cheese",
+      "mushroom",
+      "pineapple",
+      "salami"
     ]
   }
 ]

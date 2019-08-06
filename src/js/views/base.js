@@ -3,22 +3,10 @@ export const elements = {
   shoppingCart: document.querySelector('.shopping-cart__list'),
   shoppingCartBtn: document.querySelector('.shopping-cart__btn--add'),
   key: document.querySelector('#key'),
-  discount: document.querySelector('.shopping-cart__discount')
+  discount: document.querySelector('.shopping-cart__discount'),
+  cartCount: document.querySelector('.shop__count'),
+  infoAlert: document.querySelector('.menu__info-alert'),
+  slider: document.querySelector('.slider'),
+  order: document.querySelector('.shopping-cart__xD')
 }
 
-/* 
-  <li class="shopping-cart__list-item">
-    <div class="shopping-cart__pizza-info">
-      <img src="./img/pizza/1.png" alt="picca#1" class="shopping-cart__img">
-      <span class="shopping-cart__name">Margarita</span>
-    </div>
-    <div class="shopping-cart__price">
-      Cena:
-      <span id="price">35 pln</span>
-    </div>
-    <div class="shopping-cart__delete">
-      &times;
-    </div>
-
-  </li>
-*/

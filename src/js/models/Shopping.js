@@ -27,6 +27,9 @@ export default class Shopping{
 
     this.cart.push(item);
 
+    // Update local storage
+    this.saveData();
+
     return item;
   }
 
@@ -34,6 +37,9 @@ export default class Shopping{
   deleteItem(id){
     const index = this.cart.findIndex(el => el.id === id);
     this.cart.splice(index, 1);
+
+    // Update local storage
+    this.saveData();
   }
 
   totalPrice(){
@@ -45,7 +51,27 @@ export default class Shopping{
   }
 
   isExist(id){
-    return this.card.findIndex(el => el.id === id) !== -1;
+    return this.cart.findIndex(el => el.id === id) !== -1;
     
   }
+
+  saveData(){
+    localStorage.setItem('cart', JSON.stringify(this.cart));
+  }
+
+  readStorage(){
+    // Get data from storage and update
+    const storage = JSON.parse(localStorage.getItem('cart'));
+    if(storage) this.cart = storage;
+  }
+
+  clearCart(){
+    this.cart.length = 0;
+    this.saveData();
+  }
+
+  getCartLength(){
+    return this.cart.length;
+  }
+
 }

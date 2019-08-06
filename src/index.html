@@ -22,6 +22,7 @@
           <div class="header__logo">
             <img src="./img/logo.png" alt="logo" class="header__img">
           </div>
+          
           <nav class="header__nav">
             <ul class="header__list">
       
@@ -32,18 +33,18 @@
                 <a href="#menu" class="header__link">Menu</a>
               </li>
               <li class="header__list-item">
-                <a href="#" class="header__link">O nas</a>
+                <a href="#about" class="header__link">O nas</a>
               </li>
               <li class="header__list-item">
-                <a href="#" class="header__link">Kontakt</a>
+                <a href="#contact" class="header__link">Kontakt</a>
               </li>
-
               <li class="header__list-item">
                   <a href="#shopping-cart" id="#shopping-cart" class="shop">
                       <svg class="shop__svg">
                           <use xlink:href="img/shop.svg#shopping-cart" />
                       </svg>
-                      <span class="shop__count shop__count--visible">2</span>
+                      <span class="shop__count"></span>
+                      
                   </a>
 
               </li>
@@ -59,7 +60,7 @@
                 Jedyna taka w mieście
               </h1>
               <div class="bottom-line"></div>
-              <a href="#" class="btn btn--primary">Zobacz menu!</a>
+              <a href="#menu" class="btn btn--primary">Zobacz menu!</a>
             </div>
     
     
@@ -82,22 +83,27 @@
               </div>
     
               <div class="gallery__btn">
-                  <a href="#" class="btn btn--primary">Zobacz więcej</a>
+                  <a href="#about" class="btn btn--primary">Zobacz więcej</a>
               </div>
              
             </section>
             
             <!-- LOCATION -->
             <section class="location">
-              bedziemy widziec
+              <div id="map">
+                
+              </div>
             </section>
+
+
+
       </div>
 
       <!-- SHOPPING CART -->
       <div class="content-page shopping-cart" id="shopping-cart">
         
         <div class="shopping-cart__wrapper">
-          <a class="shopping-cart__close" href="#home">&times;</a>
+          <a class="shopping-cart__close" href="#menu">&times;</a>
           <h2 class="shopping-cart__title">Koszyk</h2>
           <ul class="shopping-cart__list">
 
@@ -129,7 +135,9 @@
       <!-- MENU -->
        
       <div class="content-page menu" id="menu">
+        <div class="menu__info-alert ">
 
+        </div>
         <ul class="menu__list">
 
           <!-- end menu -->
@@ -138,6 +146,52 @@
 
       </div>
 
+      <!-- ABOUT -->
+      <div class="content-page" id="about">
+        <section class="about">
+          <h1 class="about__heading">O nas</h1>
+          <div class="bottom-line"></div>
+            <p class="about__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic accusamus nisi animi possimus quas unde? Eaque quis saepe facilis perferendis accusantium. Consectetur rem dolores delectus quas autem odit quisquam, ea, provident blanditiis pariatur at! Pariatur, illo at aperiam, minus ut nam voluptatum quos, qui suscipit in odio. Voluptate, molestias dolor!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dolor neque possimus itaque quisquam sequi, ea libero maiores iusto incidunt, illum id. Eos cupiditate aliquam dicta fuga voluptatem ratione rerum veritatis sint rem, in eius atque velit culpa ipsam accusantium, incidunt perspiciatis reiciendis sit, distinctio dolorum a alias nam libero!
+            </p>
+          </section>
+        </div>
+
+      <!-- CONTACT -->
+        <div class="content-page" id="contact">
+          <section class="contact">
+            <h1 class="contact__heading">Kontakt</h1>
+            <div class="contact__line bottom-line"></div>
+            
+            <p class="contact__info">
+              Tarnów, Lorem, ipsum dolor.
+            </p>
+            <p class="contact__info">
+              tel.(014) 222 33 44
+            </p>
+            <p class="contact__info">
+              777 888 999
+            </p>
+
+            <h2 class="contact__hours">
+              Godziny otwarcia:
+            </h2>
+            <ul class="contact__list">
+              <li class="contact__list-item">pn-czw 10.00 - 00.00</li>
+              <li class="contact__list-item">pt-sb  12.00 - 01.00</li>
+              <li class="contact__list-item">pt-sb  12.00 - 00.00</li>
+            </ul>
+
+          </section>
+        </div>
+
+        <!-- ORDER -->
+        <div class="content-page" id="order">
+          <section class="order">
+            <h1 class="order__heading">Dziękujemy za złożenie zamówienia!</h1>
+          </section>
+        </div>
 
 
         <!-- FOOTER -->
@@ -188,7 +242,18 @@
   
 
 
+  <script>
+    let map;
+    function initMap() {
+      const options = {
+        zoom: 8,
+        center: {lat: 52.237049, lng: 21.017532}
+      };
 
-
+      map = new google.maps.Map(document.getElementById('map'), options);
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpc34W0dxgj1e7649WrCQ3rreIFV_ZhC8&callback=initMap"
+  async defer></script>
 </body>
 </html>

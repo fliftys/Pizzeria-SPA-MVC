@@ -96,7 +96,7 @@ const renderListItem = item => {
 </li> 
   `;
 
-  elements.menu.insertAdjacentHTML('afterbegin', markup);
+  elements.menu.insertAdjacentHTML('beforeend', markup);
 
 }
 

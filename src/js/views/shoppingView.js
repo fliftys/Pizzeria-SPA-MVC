@@ -48,11 +48,34 @@ export const showAlert = (status) => {
   if(status === 'success'){
     elements.discount.classList.remove('shopping-cart__discount--error');
     elements.discount.classList.add('shopping-cart__discount--success');
-    elements.discount.textContent = 'Aktywowano zniżkę -20%';
+    elements.discount.textContent = 'Aktywowano zniżkę -25%';
   }
   else{
     elements.discount.classList.remove('shopping-cart__discount--success');
     elements.discount.classList.add('shopping-cart__discount--error');
     elements.discount.textContent = 'Błędny kod';
+  }
+}
+
+export const toggleBtn = (count) => {
+  elements.cartCount.textContent = count;
+
+  if(count > 0){
+    elements.cartCount.classList.add('shop__count--visible');
+  }
+  else{
+    elements.cartCount.classList.remove('shop__count--visible');
+  }
+}
+
+export const showInfoAlert = () => {
+  elements.infoAlert.textContent = 'Dodano do koszyka!';
+
+  if(!document.querySelector('menu__info-alert--visible')){
+    elements.infoAlert.classList.add('menu__info-alert--visible');
+    setTimeout(() => {
+      elements.infoAlert.classList.remove('menu__info-alert--visible');
+      elements.infoAlert.textContent = '';
+    }, 2500);
   }
 }

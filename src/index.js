@@ -6,6 +6,7 @@ import Shopping from './js/models/Shopping';
 import { elements } from './js/views/base';
 import * as menuView from './js/views/menuView';
 import * as shoppingView from './js/views/shoppingView';
+import * as sliderek from './js/views/sliderView';
 
 
 /* 
@@ -16,7 +17,12 @@ import * as shoppingView from './js/views/shoppingView';
 
 const state = {};
 
-
+window.addEventListener('load', () => {
+  if(window.location.hash === ''){
+    window.location.hash = '#home';
+  }
+  sliderek.slider();
+})
 
 /* ------------------------------------------- */
 /* MENU CONTROLLER */
@@ -41,8 +47,6 @@ const controlMenu = async () => {
   menuView.renderMenu(state.Menu.menuData);
 
 
-  console.log(state.Menu.menuData);
-
 }
 
 const events = ['hashchange', 'load'];
@@ -58,9 +62,7 @@ events.forEach(event => {
   });
 });
 
-window.addEventListener('load', () => {
-  window.location.hash = '#home';
-})
+
 
 
 
@@ -94,22 +96,28 @@ const controlCart = (id) => {
   shoppingView.renderCart(state.Shopping.cart);
   window.mobbyn = state.Shopping.cart;
   console.log(window.mobbyn);
+  
+  // Toggle count
+  shoppingView.toggleBtn(state.Shopping.getCartLength());
+
+  // Show alert
+  shoppingView.showInfoAlert();
 
   // Show total price
   const price = state.Shopping.totalPrice();
   shoppingView.showPrice(price);
-
-
 }
 
-
+// Add item to the cart
 elements.menu.addEventListener('click', e => {
   if(e.target.classList.contains('menu__button')){
+    // Add to cart
     const id = e.target.dataset.id;
     controlCart(id);
   }
 });
 
+// Delete cart item
 elements.shoppingCart.addEventListener('click', e => {
   if(e.target.classList.contains('shopping-cart__delete')){
 
@@ -121,11 +129,16 @@ elements.shoppingCart.addEventListener('click', e => {
     shoppingView.clearResults();
     // Render UI
     shoppingView.renderCart(state.Shopping.cart);
+    // Toggle count
+    shoppingView.toggleBtn(state.Shopping.getCartLength());
     // Show total price
     const price = state.Shopping.totalPrice();
     shoppingView.showPrice(price);
   }
 });
+
+
+// Enter discount
 elements.shoppingCartBtn.addEventListener('click', e => {
   const key = shoppingView.getKey();
 
@@ -152,3 +165,34 @@ elements.shoppingCartBtn.addEventListener('click', e => {
   }
 });
 
+// Order success
+elements.order.addEventListener('click', () => {
+  // Clear cart data
+  state.Shopping.clearCart();
+  // Clear UI results
+  shoppingView.clearResults();
+  // Toggle count button
+  shoppingView.toggleBtn(0);
+
+});
+
+
+// Restore data and prepare UI on load
+window.addEventListener('load', () => {
+
+  state.Shopping = new Shopping();
+
+  // Restore cart
+  state.Shopping.readStorage();
+
+
+  // Render items
+  // Render UI
+  shoppingView.renderCart(state.Shopping.cart);
+  // Toggle count
+  shoppingView.toggleBtn(state.Shopping.getCartLength());
+  // Show total price
+  const price = state.Shopping.totalPrice();
+  shoppingView.showPrice(price);
+
+});
