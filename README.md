@@ -8,7 +8,7 @@ Podgląd netlify: https://hopeful-hopper-6769a4.netlify.com/
 <ul>
   <li>HTML5</li>
   <li>CSS3 (SASS - SCSS) - według założeń wzorca BEM</li>
-  <li>Vanillia JavaSacript - według założeń wzorca MVC</li>
+  <li>Vanillia JavaScript - według założeń wzorca MVC</li>
 </ul>
 
 <h2>Użyte narzędzia: </h2>
